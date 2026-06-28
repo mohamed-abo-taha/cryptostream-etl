@@ -1,0 +1,53 @@
+<svg width="680" height="430" viewBox="0 0 680 430" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .hdr { font-size: 15px; font-weight: 700; fill: #1a1a1a; }
+    .sub { font-size: 11px; fill: #5F5E5A; }
+    .kpiN { font-size: 19px; font-weight: 700; fill: #185FA5; }
+    .kpiL { font-size: 11px; fill: #444441; }
+    .lbl { font-size: 12px; fill: #2C2C2A; }
+    .val { font-size: 12px; font-weight: 700; }
+  </style>
+  <rect x="0" y="0" width="680" height="430" fill="#ffffff"/>
+
+  <text class="hdr" x="40" y="30">Project 1 — CryptoStream · SQL analytics (live output)</text>
+  <text class="sub" x="40" y="46">16 coins ingested → transformed → loaded into SQLite, then queried in SQL</text>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="40" y="58" width="140" height="48" rx="8" fill="#E6F1FB"/>
+    <text class="kpiN" x="54" y="82">16</text><text class="kpiL" x="54" y="98">coins tracked</text>
+  </g>
+  <g>
+    <rect x="190" y="58" width="140" height="48" rx="8" fill="#E6F1FB"/>
+    <text class="kpiN" x="204" y="82">$2.02T</text><text class="kpiL" x="204" y="98">total market cap</text>
+  </g>
+  <g>
+    <rect x="340" y="58" width="140" height="48" rx="8" fill="#E6F1FB"/>
+    <text class="kpiN" x="354" y="82">$4,093</text><text class="kpiL" x="354" y="98">avg price (USD)</text>
+  </g>
+  <g>
+    <rect x="490" y="58" width="150" height="48" rx="8" fill="#E6F1FB"/>
+    <text class="kpiN" x="504" y="82">$100B</text><text class="kpiL" x="504" y="98">24h volume</text>
+  </g>
+
+  <!-- Dominance bars -->
+  <text class="hdr" x="40" y="138" style="font-size:13px">Market dominance (%)</text>
+  <g>
+    <text class="lbl" x="40" y="160">BTC</text><rect x="90" y="150" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="150" width="427" height="13" rx="3" fill="#378ADD"/><text class="val" x="528" y="160" fill="#185FA5">59.58</text>
+    <text class="lbl" x="40" y="182">ETH</text><rect x="90" y="172" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="172" width="144" height="13" rx="3" fill="#378ADD"/><text class="val" x="528" y="182" fill="#185FA5">20.06</text>
+    <text class="lbl" x="40" y="204">USDT</text><rect x="90" y="194" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="194" width="40" height="13" rx="3" fill="#378ADD"/><text class="val" x="528" y="204" fill="#185FA5">5.53</text>
+    <text class="lbl" x="40" y="226">BNB</text><rect x="90" y="216" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="216" width="31" height="13" rx="3" fill="#378ADD"/><text class="val" x="528" y="226" fill="#185FA5">4.33</text>
+    <text class="lbl" x="40" y="248">SOL</text><rect x="90" y="238" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="238" width="23" height="13" rx="3" fill="#378ADD"/><text class="val" x="528" y="248" fill="#185FA5">3.23</text>
+  </g>
+
+  <!-- Movers -->
+  <text class="hdr" x="40" y="284" style="font-size:13px">Top 24h movers (%)</text>
+  <g>
+    <text class="lbl" x="40" y="306">SHIB</text><rect x="90" y="296" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="296" width="300" height="13" rx="3" fill="#639922"/><text class="val" x="528" y="306" fill="#3B6D11">+11.23</text>
+    <text class="lbl" x="40" y="328">DOGE</text><rect x="90" y="318" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="318" width="240" height="13" rx="3" fill="#639922"/><text class="val" x="528" y="328" fill="#3B6D11">+8.97</text>
+    <text class="lbl" x="40" y="350">SOL</text><rect x="90" y="340" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="340" width="150" height="13" rx="3" fill="#639922"/><text class="val" x="528" y="350" fill="#3B6D11">+5.62</text>
+    <text class="lbl" x="40" y="372">DOT</text><rect x="90" y="362" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="362" width="131" height="13" rx="3" fill="#E24B4A"/><text class="val" x="528" y="372" fill="#A32D2D">-4.91</text>
+    <text class="lbl" x="40" y="394">ADA</text><rect x="90" y="384" width="430" height="13" rx="3" fill="#EEF2F6"/><rect x="90" y="384" width="92" height="13" rx="3" fill="#E24B4A"/><text class="val" x="528" y="394" fill="#A32D2D">-3.45</text>
+  </g>
+</svg>

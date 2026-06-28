@@ -1,12 +1,28 @@
-# Project 1 — CryptoStream: REST → SQL ETL Pipeline
+# CryptoStream — REST → SQL ETL Pipeline
+
+[![CI](https://github.com/mohamed-abo-taha/cryptostream-etl/actions/workflows/ci.yml/badge.svg)](https://github.com/mohamed-abo-taha/cryptostream-etl/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.12-blue)
+![SQLite](https://img.shields.io/badge/SQL-SQLite-003B57)
+![Airflow](https://img.shields.io/badge/orchestration-Airflow-017CEE)
+![Streamlit](https://img.shields.io/badge/dashboard-Streamlit-FF4B4B)
+![Docker](https://img.shields.io/badge/containers-Docker-2496ED)
 
 A small but production-shaped **ETL pipeline** that ingests cryptocurrency
-market data from a **REST API**, transforms it with an **OOP** design, stores it
-in a **SQL** database, runs **analytical** queries, and **serves the result back
-out over its own REST API**.
+market data from a **REST API** (or by scraping HTML), transforms it with an
+**OOP** design, validates it through a **data-quality gate**, stores it in a
+**SQL** database, runs **analytical** queries, and **serves the result back out
+over its own REST API** — scheduled by **Airflow** and visualised in **Streamlit**.
 
 > Built to demonstrate the core Junior Data Engineer skills: data pipelines,
 > ingestion, transformation, storage, OOP, SQL, REST APIs and analytical thinking.
+
+### Architecture
+
+![Architecture](docs/architecture.png)
+
+### Live analytics output
+
+![Analytics](docs/results.png)
 
 ---
 
