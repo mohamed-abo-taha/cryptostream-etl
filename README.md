@@ -139,14 +139,3 @@ orchestration story.
 python -m pytest -q     # 15 passing: transform, validation/dedup, pipeline,
                         # analytics, quality framework, web scraping
 ```
-
-## Skills demonstrated
-
-- **Data pipeline / ingestion / transformation / storage** — the whole ETL flow.
-- **OOP** — abstract base classes, polymorphism, dependency inversion, dataclasses.
-- **SQL** — DDL with constraints + indexes, idempotent UPSERT, aggregates,
-  `CASE`/`GROUP BY`, subqueries.
-- **REST APIs / data between systems** — consumes one REST API, exposes another.
-- **Web scraping** — BeautifulSoup HTML extractor as a drop-in source.
-- **Analytical thinking** — push-down analytics answering real market questions.
-- **Orchestration & ops** — Airflow scheduling, data-quality gates, Docker, Streamlit.
