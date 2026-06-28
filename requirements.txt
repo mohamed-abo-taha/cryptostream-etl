@@ -1,0 +1,9 @@
+# Project 1 — CryptoStream ETL
+requests>=2.31        # REST extraction (--source rest)
+beautifulsoup4>=4.12  # HTML web scraping (--source scrape)
+flask>=3.0            # REST API that serves the warehoused data
+pandas>=2.1           # dashboard data wrangling
+streamlit>=1.30       # interactive dashboard
+pytest>=8.0           # test suite
+# sqlite3 ships with the Python standard library.
+# Apache Airflow runs in its own container (see airflow/) — not installed here.

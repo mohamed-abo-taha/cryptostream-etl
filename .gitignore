@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Generated SQLite warehouse + quality reports
+data/
+
+# Airflow runtime artifacts
+airflow/logs/
+airflow.db
+airflow.cfg
+webserver_config.py
+standalone_admin_password.txt
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db

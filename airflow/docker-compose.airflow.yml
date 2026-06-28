@@ -1,0 +1,27 @@
+# Minimal Apache Airflow (standalone) for the CryptoStream DAG.
+#   cd airflow && docker compose -f docker-compose.airflow.yml up
+#   UI: http://localhost:8080  (user: admin / pass: admin)
+#
+# The whole project is mounted at /opt/airflow/project so the DAG can import
+# `config` and `src/`; dags/ is mounted as Airflow's dags folder.
+
+services:
+  airflow:
+    image: apache/airflow:2.9.3-python3.12
+    container_name: cryptostream-airflow
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db
+      - AIRFLOW__CORE__DAGS_FOLDER=/opt/airflow/dags
+      - PYTHONPATH=/opt/airflow/project
+      - _AIRFLOW_DB_MIGRATE=true
+      - _AIRFLOW_WWW_USER_CREATE=true
+      - _AIRFLOW_WWW_USER_USERNAME=admin
+      - _AIRFLOW_WWW_USER_PASSWORD=admin
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ..:/opt/airflow/project          # the CryptoStream project (config.py, src/)
+    command: bash -c "airflow db migrate && airflow standalone"

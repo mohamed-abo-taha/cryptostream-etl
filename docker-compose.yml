@@ -1,0 +1,33 @@
+# CryptoStream local stack: REST API + Streamlit dashboard.
+#   docker compose up -d --build
+#   API:        http://localhost:5000/coins
+#   Dashboard:  http://localhost:8501
+
+services:
+  api:
+    build: .
+    container_name: cryptostream-api
+    command: python run_api.py
+    environment:
+      - API_HOST=0.0.0.0
+      - CRYPTOSTREAM_DB=/app/data/cryptostream.db
+    ports:
+      - "5000:5000"
+    volumes:
+      - warehouse:/app/data
+
+  dashboard:
+    build: .
+    container_name: cryptostream-dashboard
+    command: streamlit run dashboard.py --server.address=0.0.0.0 --server.port=8501
+    environment:
+      - CRYPTOSTREAM_DB=/app/data/cryptostream.db
+    ports:
+      - "8501:8501"
+    volumes:
+      - warehouse:/app/data
+    depends_on:
+      - api
+
+volumes:
+  warehouse:
