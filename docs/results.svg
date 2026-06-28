@@ -10,7 +10,7 @@
   </style>
   <rect x="0" y="0" width="680" height="430" fill="#ffffff"/>
 
-  <text class="hdr" x="40" y="30">Project 1 — CryptoStream · SQL analytics (live output)</text>
+  <text class="hdr" x="40" y="30">CryptoStream · SQL analytics (live output)</text>
   <text class="sub" x="40" y="46">16 coins ingested → transformed → loaded into SQLite, then queried in SQL</text>
 
   <!-- KPI cards -->

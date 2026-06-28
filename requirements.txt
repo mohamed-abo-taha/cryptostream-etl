@@ -1,4 +1,4 @@
-# Project 1 — CryptoStream ETL
+# CryptoStream ETL
 requests>=2.31        # REST extraction (--source rest)
 beautifulsoup4>=4.12  # HTML web scraping (--source scrape)
 flask>=3.0            # REST API that serves the warehoused data
