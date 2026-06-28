@@ -22,7 +22,7 @@ over its own REST API** — scheduled by **Airflow** and visualised in **Streaml
 
 ### Live analytics output
 
-![Analytics](docs/results.png)
+![Analytics](docs/results.png?v=2)
 
 ---
 
